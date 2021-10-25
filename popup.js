@@ -35,12 +35,14 @@ var queryInfo = {
   chrome.tabs.query(queryInfo, (tabs) => {  
     var tab = tabs[0];  
     var url = tab.url;
+    let domain = (new URL(url));
+    domain = domain.hostname;
     var data = JSON.stringify({
     "email": email,
-    "login_url": url
+    "login_url": domain
     });
 if (email == '') {
-       document.getElementById("error").innerHTML = "Please Logged in with Email Id in your chrome browser";
+       document.getElementById("error").innerHTML = "Please Logged in with Registered Email Id in your chrome browser";
        return false;
 }
 
