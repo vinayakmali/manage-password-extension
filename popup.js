@@ -40,7 +40,7 @@ var queryInfo = {
     "login_url": url
     });
 if (email == '') {
-       document.getElementById("error").innerHTML = email+"sdsds";
+       document.getElementById("error").innerHTML = "Please Logged in with Email Id in your chrome browser";
        return false;
 }
 
